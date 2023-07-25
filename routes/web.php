@@ -30,6 +30,18 @@ Route::get('people', function () {
     return view('frontend.people');
 })->name('people');
 
+Route::get('projects', function () {
+    return view('frontend.projects');
+})->name('projects');
+
+Route::get('contact', function () {
+    return view('frontend.contact');
+})->name('contact');
+
+Route::get('consultants', function () {
+    return view('frontend.consultants');
+})->name('consultants');
+
 
 // Auth::routes();
 

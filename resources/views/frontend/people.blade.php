@@ -8,14 +8,7 @@
 <main>
     <div class="page-content">
       <div class="hide-on-mobile">
-        <ul class="sub-header-nav">
-          <li class="sub-header-nav__item">
-            <a href="people-team.html" class="sub-header-nav__item-link active"><h2 class="fw-bolder m-0">Team</h2></a>
-          </li>
-          <li class="sub-header-nav__item">
-            <a href="people-consultants.html" class="sub-header-nav__item-link"><h2 class="fw-bolder m-0">Consultants</h2></a>
-          </li>
-        </ul>
+        @include('frontend.components.people_menu')
         <div class="people-list-area">
           <ul class="people-list">
             <li class="people-list__item people-list__item-1">

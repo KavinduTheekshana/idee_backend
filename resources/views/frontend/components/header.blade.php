@@ -12,13 +12,13 @@
             <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="{{ route('about') }}">idée</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ request()->is('people') ? 'active' : '' }}" href="{{ route('people') }}">people</a>
+            <a class="nav-link {{ request()->is('people') || request()->is('consultants') ? 'active' : '' }}" href="{{ route('people') }}">people</a>
           </li>  
           <li class="nav-item">
-            <a class="nav-link {{ request()->is('projects') ? 'active' : '' }}" href="{{ route('idee') }}">projects</a>
+            <a class="nav-link {{ request()->is('projects') ? 'active' : '' }}" href="{{ route('projects') }}">projects</a>
           </li> 
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('idee') }}">contact</a>
+            <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('idee') }}">accolades</a>

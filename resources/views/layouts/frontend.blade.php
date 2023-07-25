@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
     <link rel="icon" href="{{ asset('frontend/images/idee-icon.svg') }}">
     <title>@yield('page_title')</title>
-        <!-- Scripts -->
-        @vite([ 'resources/js/app.js'])
+    <!-- Scripts -->
+    @vite(['resources/js/app.js'])
 </head>
 
 @yield('content')
@@ -21,4 +22,6 @@
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{{ asset('frontend/js/common.js') }}"></script>
+
+
 </html>
