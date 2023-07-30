@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProjectssController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -50,4 +53,9 @@ Auth::routes([
     'verify' => false, // Email Verification Routes...
   ]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/categories', [CategoriesController::class, 'index'])->name('categories');
+Route::get('/projects/add', [ProjectssController::class, 'index'])->name('projects.add');
+Route::get('/projects/list', [ProjectssController::class, 'list'])->name('projects.list');
+Route::post('/projects/save', [ProjectssController::class, 'save'])->name('projects.save');

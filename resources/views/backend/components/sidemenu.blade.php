@@ -12,7 +12,7 @@
 
             <li class="menu-label">Menu</li>
 
-            <li>
+            <li class="{{ request()->is('home') ? 'mm-active' : '' }}">
                 <a href="{{ route('home') }}">
                     <div class="parent-icon"><i class='bx bx-home-alt'></i>
                     </div>
@@ -20,11 +20,19 @@
                 </a>
             </li>
 
-            <li>
-                <a href="{{ route('home') }}">
+            <li class="{{ request()->is('categories') ? 'mm-active' : '' }}">
+                <a href="{{ route('categories') }}">
                     <div class="parent-icon"><i class='bx bx-category-alt'></i>
                     </div>
                     <div class="menu-title">Categories</div>
+                </a>
+            </li>
+
+            <li class="{{ request()->is('projects.add') ? 'mm-active' : '' }}">
+                <a href="{{ route('projects.add') }}">
+                    <div class="parent-icon"><i class='bx bx-add-to-queue' ></i>
+                    </div>
+                    <div class="menu-title">Add Project</div>
                 </a>
             </li>
    
