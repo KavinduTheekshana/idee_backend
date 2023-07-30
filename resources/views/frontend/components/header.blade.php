@@ -21,7 +21,7 @@
             <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('idee') }}">accolades</a>
+            <a class="nav-link" href="#">accolades</a>
           </li>
         </ul>
       </div>

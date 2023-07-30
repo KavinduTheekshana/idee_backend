@@ -168,7 +168,7 @@
                     </td>
                     <td class="project-circle hide-on-ipad">
                       <a href="">
-                        <img src="{{ asset('frontend/images/institution-icon.svg') }}" alt="Institution">
+                        <img src="{{ asset('frontend/images/institution-icon.svg') }}" alt="Institutional">
                       </a>
                     </td>
                     <td class="project-circle hide-on-ipad">
