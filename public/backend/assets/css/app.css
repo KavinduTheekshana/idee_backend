@@ -18,7 +18,17 @@ File: app.css
 .rounded-0-transparent{
 	border-color: transparent !important;
 }
-
+.table-image-holder{
+	width: 90px;
+	height: 90px;
+	border-radius: 100%;
+}
+.gallery-image-holder{
+	width: 300px;
+}
+.model-image{
+	width: 100%;
+}
 body {
 	font-size: 14px;
 	color: #4c5258;

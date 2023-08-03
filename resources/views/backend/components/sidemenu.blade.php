@@ -28,11 +28,19 @@
                 </a>
             </li>
 
-            <li class="{{ request()->is('projects.add') ? 'mm-active' : '' }}">
+            <li class="{{ request()->is('projects/add') ? 'mm-active' : '' }}">
                 <a href="{{ route('projects.add') }}">
                     <div class="parent-icon"><i class='bx bx-add-to-queue' ></i>
                     </div>
                     <div class="menu-title">Add Project</div>
+                </a>
+            </li>
+
+            <li class="{{ request()->is('projects/list') || request()->segment(1) === 'project-update-view' || request()->segment(1) === 'project-gallery' ? 'mm-active' : '' }}">
+                <a href="{{ route('projects.list') }}">
+                    <div class="parent-icon"><i class='bx bx-list-check' ></i>
+                    </div>
+                    <div class="menu-title">Projects List</div>
                 </a>
             </li>
    

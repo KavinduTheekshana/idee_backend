@@ -15,7 +15,7 @@
     @include('backend.components.header')
 
 
-    {{-- @include('backend.dashboard.components') --}}
+    @include('backend.pages.dashboard.dashboard')
 
 
 
