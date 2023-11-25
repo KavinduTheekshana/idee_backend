@@ -35,9 +35,9 @@ Route::get('people', function () {
     return view('frontend.people');
 })->name('people');
 
-Route::get('projects', function () {
+Route::get('project', function () {
     return view('frontend.projects');
-})->name('projects');
+})->name('project');
 
 Route::get('contact', function () {
     return view('frontend.contact');
@@ -47,6 +47,9 @@ Route::get('consultants', function () {
     return view('frontend.consultants');
 })->name('consultants');
 
+// web.php
+
+Route::get('/project/{slug}', [projectsController::class, 'show'])->name('project.show');
 
 // Auth::routes();
 Auth::routes([
@@ -72,3 +75,7 @@ Route::post('/gallery/save', [GalleryController::class, 'save'])->name('gallery.
 Route::get('/gallery-active/{id}', [GalleryController::class, 'active'])->name('gallery.active');
 Route::get('/gallery-diactive/{id}', [GalleryController::class, 'diactive'])->name('gallery.diactive');
 Route::get('/gallery-delete/{id}', [GalleryController::class, 'delete'])->name('gallery.delete');
+
+
+
+Route::get('/get-projects', [projectsController::class, 'getProjectsByCategory']);

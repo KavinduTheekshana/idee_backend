@@ -9,7 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
     <link rel="icon" href="{{ asset('frontend/images/idee-icon.svg') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>@yield('page_title')</title>
     <!-- Scripts -->
     @vite(['resources/js/app.js'])
@@ -23,5 +25,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{{ asset('frontend/js/common.js') }}"></script>
 
-
+@stack('scripts')
 </html>

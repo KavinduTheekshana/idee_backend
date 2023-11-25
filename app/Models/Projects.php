@@ -16,4 +16,9 @@ class Projects extends Model
         return $this->belongsTo(Categories::class, 'category_id');
     }
 
+    public function galleries()
+{
+    return $this->hasMany(Gallery::class, 'project_id');
+}
+
 }

@@ -15,19 +15,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-end">
                     <li class="nav-item">
-                        <a class="nav-link" href="about-us.html">idée</a>
+                        <a class="nav-link" href="{{route('about')}}">idée</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="people-team.html">people</a>
+                        <a class="nav-link" href="{{route('people')}}">people</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="projects.html">projects</a>
+                        <a class="nav-link" href="{{route('project')}}">projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">contact</a>
+                        <a class="nav-link" href="{{route('contact')}}">contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="accolades.html">accolades</a>
+                        <a class="nav-link" href="#">accolades</a>
                     </li>
                 </ul>
             </div>

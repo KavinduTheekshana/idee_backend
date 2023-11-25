@@ -3,7 +3,7 @@
 @section('site_logo', asset('frontend/images/logo-white.svg'))
 @section('content')
 <body>
-   
+
 
     @include('frontend.components.header')
 
@@ -114,7 +114,7 @@
                       <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-16">
                     </td>
                   </tr>
-                  
+
                   <tr>
                     <td class="project-circle">
                       <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-1">
@@ -125,15 +125,12 @@
                     <td class="project-circle">
                       <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-3">
                     </td>
-                    
 
 
 
-
-
-                    <td class="project-circle">
+                    <td class="project-circle hide-on-ipad">
                       <a href="">
-                        <img src="{{ asset('frontend/images/hospitality-icon.svg') }}" alt="Hospitality">
+                        <img src="{{ asset('frontend/images/residential-icon.svg') }}" alt="Residential">
                       </a>
                     </td>
                     <td class="project-circle">
@@ -143,27 +140,12 @@
                     </td>
                     <td class="project-circle">
                       <a href="">
-                        <img src="{{ asset('frontend/images/health-icon.svg') }}" alt="Hospitality">
-                      </a>
-                    </td>
-                    <td class="project-circle">
-                      <a href="">
-                        <img src="{{ asset('frontend/images/hospitality-icon.svg') }}" alt="Hospitality">
-                      </a>
-                    </td>
-                    <td class="project-circle">
-                      <a href="">
                         <img src="{{ asset('frontend/images/industrial-icon.svg') }}" alt="Industial">
                       </a>
                     </td>
-                    <td class="project-circle hide-on-ipad">
+                    <td class="project-circle">
                       <a href="">
-                        <img src="{{ asset('frontend/images/iterior-icon.svg') }}" alt="Interior">
-                      </a>
-                    </td>
-                    <td class="project-circle hide-on-ipad">
-                      <a href="">
-                        <img src="{{ asset('frontend/images/hospitality-icon.svg') }}" alt="Hospitality">
+                        <img src="{{ asset('frontend/images/health-icon.svg') }}" alt="Health">
                       </a>
                     </td>
                     <td class="project-circle hide-on-ipad">
@@ -171,11 +153,26 @@
                         <img src="{{ asset('frontend/images/institution-icon.svg') }}" alt="Institutional">
                       </a>
                     </td>
-                    <td class="project-circle hide-on-ipad">
+                    <td class="project-circle">
                       <a href="">
-                        <img src="{{ asset('frontend/images/residential-icon.svg') }}" alt="Residential">
+                        <img src="{{ asset('frontend/images/hospitality-icon.svg') }}" alt="Hospitality">
                       </a>
                     </td>
+                    <td class="project-circle hide-on-ipad">
+                      <a href="">
+                        <img src="{{ asset('frontend/images/iterior-icon.svg') }}" alt="Interior">
+                      </a>
+                    </td>
+
+                    <td class="project-circle">
+                      <a href="">
+                        <img src="{{ asset('frontend/images/other-icon.svg') }}" alt="Other">
+                      </a>
+                    </td>
+
+
+
+
 
 
 
@@ -604,8 +601,8 @@
                     </a>
                   </div>
                 </div>
-  
-  
+
+
                 <div class="col">
                   <div class="project-circle">
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
@@ -655,8 +652,8 @@
                     </a>
                   </div>
                 </div>
-  
-  
+
+
                 <div class="col">
                   <div class="project-circle">
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
@@ -711,8 +708,8 @@
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
                   </div>
                 </div>
-  
-  
+
+
                 <div class="col">
                   <div class="project-circle">
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
@@ -762,8 +759,8 @@
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
                   </div>
                 </div>
-  
-  
+
+
                 <div class="col">
                   <div class="project-circle">
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
@@ -813,8 +810,8 @@
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
                   </div>
                 </div>
-  
-  
+
+
                 <div class="col">
                   <div class="project-circle">
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
@@ -864,8 +861,8 @@
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
                   </div>
                 </div>
-  
-  
+
+
                 <div class="col">
                   <div class="project-circle">
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
@@ -915,8 +912,8 @@
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
                   </div>
                 </div>
-  
-  
+
+
                 <div class="col">
                   <div class="project-circle">
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
@@ -966,8 +963,8 @@
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
                   </div>
                 </div>
-  
-  
+
+
                 <div class="col">
                   <div class="project-circle">
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
@@ -1017,8 +1014,8 @@
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
                   </div>
                 </div>
-  
-  
+
+
                 <div class="col">
                   <div class="project-circle">
                     <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-0">
