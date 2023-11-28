@@ -5,6 +5,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ProjectssController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -49,7 +50,10 @@ Route::get('consultants', function () {
 
 // web.php
 
-Route::get('/project/{slug}', [projectsController::class, 'show'])->name('project.show');
+Route::get('/project/{slug}', [UserController::class, 'show'])->name('project.show');
+Route::get('/get-projects', [UserController::class, 'getProjectsByCategory']);
+// Route::get('/project/{param}', [UserController::class, 'index']])->name('project');
+
 
 // Auth::routes();
 Auth::routes([
@@ -78,4 +82,4 @@ Route::get('/gallery-delete/{id}', [GalleryController::class, 'delete'])->name('
 
 
 
-Route::get('/get-projects', [projectsController::class, 'getProjectsByCategory']);
+

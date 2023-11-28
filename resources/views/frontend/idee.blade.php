@@ -129,44 +129,44 @@
 
 
                     <td class="project-circle hide-on-ipad">
-                      <a href="">
-                        <img src="{{ asset('frontend/images/residential-icon.svg') }}" alt="Residential">
+                      <a href="{{route('project')}}">
+                        <img src="{{ asset('frontend/images/residential-icon.svg') }}" alt="Residential" title="Residential" data-toggle="tooltip" data-bs-placement="bottom">
                       </a>
                     </td>
                     <td class="project-circle">
-                      <a href="">
-                        <img src="{{ asset('frontend/images/comercial-icon.svg') }}" alt="commercial">
+                      <a href="{{route('project')}}">
+                        <img src="{{ asset('frontend/images/comercial-icon.svg') }}" alt="commercial" title="commercial" data-toggle="tooltip" data-bs-placement="bottom">
                       </a>
                     </td>
                     <td class="project-circle">
-                      <a href="">
-                        <img src="{{ asset('frontend/images/industrial-icon.svg') }}" alt="Industial">
+                      <a href="{{route('project')}}">
+                        <img src="{{ asset('frontend/images/industrial-icon.svg') }}" alt="Industial" title="Industial" data-toggle="tooltip" data-bs-placement="bottom">
                       </a>
                     </td>
                     <td class="project-circle">
-                      <a href="">
-                        <img src="{{ asset('frontend/images/health-icon.svg') }}" alt="Health">
+                      <a href="{{route('project')}}">
+                        <img src="{{ asset('frontend/images/health-icon.svg') }}" alt="Health" title="Health" data-toggle="tooltip" data-bs-placement="bottom">
                       </a>
                     </td>
                     <td class="project-circle hide-on-ipad">
-                      <a href="">
-                        <img src="{{ asset('frontend/images/institution-icon.svg') }}" alt="Institutional">
+                      <a href="{{route('project')}}">
+                        <img src="{{ asset('frontend/images/institution-icon.svg') }}" alt="Institutional" title="Institutional" data-toggle="tooltip" data-bs-placement="bottom">
                       </a>
                     </td>
                     <td class="project-circle">
-                      <a href="">
-                        <img src="{{ asset('frontend/images/hospitality-icon.svg') }}" alt="Hospitality">
+                      <a href="{{route('project')}}">
+                        <img src="{{ asset('frontend/images/hospitality-icon.svg') }}" alt="Hospitality" title="Hospitality" data-toggle="tooltip" data-bs-placement="bottom">
                       </a>
                     </td>
                     <td class="project-circle hide-on-ipad">
-                      <a href="">
-                        <img src="{{ asset('frontend/images/iterior-icon.svg') }}" alt="Interior">
+                      <a href="{{route('project')}}">
+                        <img src="{{ asset('frontend/images/iterior-icon.svg') }}" alt="Interior" title="Interior" data-toggle="tooltip" data-bs-placement="bottom">
                       </a>
                     </td>
 
                     <td class="project-circle">
-                      <a href="">
-                        <img src="{{ asset('frontend/images/other-icon.svg') }}" alt="Other">
+                      <a href="{{route('project')}}">
+                        <img src="{{ asset('frontend/images/other-icon.svg') }}" alt="Other" title="Other" data-toggle="tooltip" data-bs-placement="bottom">
                       </a>
                     </td>
 

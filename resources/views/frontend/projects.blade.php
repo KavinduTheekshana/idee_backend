@@ -1608,28 +1608,36 @@
                         console.log(response);
                         $('#category-name-header').text(response.categoryName + " " +
                             "Projects");
-                            response.projects.forEach(function(project) {
-            // Create an <a> tag for each project
-            var projectLink = $('<a>')
-                .attr('href', '/project/' + project.slug) // Adjust the URL as needed
-                .addClass('project-list-area__list-item-link');
+                        response.projects.forEach(function(project) {
+                            // Create an <a> tag for each project
+                            var projectLink = $('<a>')
+                                .attr('href', '/project/' + project
+                                .slug) // Adjust the URL as needed
+                                .addClass('project-list-area__list-item-link');
 
-            // Append the project title in an <h4> tag
-            projectLink.append($('<h4>').addClass('fw-bolder m-0').text(project.title));
+                            // Append the project title in an <h4> tag
+                            projectLink.append($('<h4>').addClass('fw-bolder m-0').text(
+                                project.title));
 
-            // Append the project location in a <p> tag
-            projectLink.append($('<p>').addClass('m-0').text('Location: ' + project.location)); // Assuming 'location' is the property
+                            // Append the project location in a <p> tag
+                            projectLink.append($('<p>').addClass('m-0').text(
+                                'Location: ' + project.location
+                                )); // Assuming 'location' is the property
 
-            // Append additional project details in another <p> tag
-            var additionalDetails = 'Land Extent_' + project.land + '/Floor area_' + project.floor + '/ Project year_' + project.project_year + '/ Completed_' + project.completed_year; // Adjust property names as needed
-            projectLink.append($('<p>').text(additionalDetails));
+                            // Append additional project details in another <p> tag
+                            var additionalDetails = 'Land Extent_' + project.land +
+                                '/Floor area_' + project.floor + '/ Project year_' +
+                                project.project_year + '/ Completed_' + project
+                                .completed_year; // Adjust property names as needed
+                            projectLink.append($('<p>').text(additionalDetails));
 
-            // Create an <li> tag and append the <a> tag to it
-            var projectListItem = $('<li>').addClass('project-list-area__list-item').append(projectLink);
+                            // Create an <li> tag and append the <a> tag to it
+                            var projectListItem = $('<li>').addClass(
+                                'project-list-area__list-item').append(projectLink);
 
-            // Append the <li> tag to the <ul> container
-            projectsContainer.append(projectListItem);
-        });
+                            // Append the <li> tag to the <ul> container
+                            projectsContainer.append(projectListItem);
+                        });
                         $('.project-list-area').removeClass('d-none');
                         // You can update the DOM here to show project details
                     },
