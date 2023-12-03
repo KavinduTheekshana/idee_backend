@@ -49,27 +49,28 @@
                                     <tr>
                                         <td><img src="{{ asset($project->image) }}" class="table-image-holder"
                                                 alt="image" /> </td>
-                             
 
-                                        <td>{{ $project->title }}</td>
+
+                                        <td>{{ \Illuminate\Support\Str::limit($project->title, 70, '...') }}</td>
+                                        <td>{{ substr($project->title, 100) }}</td>
                                         <td>{{ $project->location }}</td>
                                         <td>{{ $project->category->name }}</td>
-                              
-                                
-                                 
-                                      
-                                         <td>
+
+
+
+
+                                        <td>
                                             @if ($project->status)
-                                            <span class="badge bg-success">Active</span>
+                                                <span class="badge bg-success">Active</span>
                                             @else
-                                            <span class="badge bg-danger">Diactive</span>
+                                                <span class="badge bg-danger">Diactive</span>
                                             @endif
                                         </td>
-      
- 
-            
-                                 
-                                     
+
+
+
+
+
 
                                         <td>
                                             <div class=" table-icon-group">
@@ -81,15 +82,12 @@
                                                     data-bs-target="#exampleLargeModal"
                                                     data-title="{{ $project->title }}"
                                                     data-location="{{ $project->location }}"
-                     
                                                     data-land="{{ $project->land }}"
                                                     data-description="{{ $project->description }}"
                                                     data-status="{{ $project->status }}"
                                                     data-floor="{{ $project->floor }}"
                                                     data-category="{{ $project->category->name }}"
                                                     data-project_year="{{ $project->project_year }}"
-                            
-                             
                                                     data-completed_year="{{ $project->completed_year }}"
                                                     data-image="{{ asset($project->image) }}"><i
                                                         class="bx bxs-show me-0"></i></button>
@@ -105,13 +103,16 @@
                                                 @endif
 
 
-                                                <a href="{{ route('project.update_view', ['id' => $project->id]) }}" type="button"
-                                                    class="btn btn-primary"><i class='bx bxs-edit me-0'></i></a>
-                                                <a href="{{ route('project.delete', ['id' => $project->id]) }}" type="button"
-                                                    class="btn btn-warning"><i class='bx bxs-trash-alt me-0'></i></a>
+                                                <a href="{{ route('project.update_view', ['id' => $project->id]) }}"
+                                                    type="button" class="btn btn-primary"><i
+                                                        class='bx bxs-edit me-0'></i></a>
+                                                <a href="{{ route('project.delete', ['id' => $project->id]) }}"
+                                                    type="button" class="btn btn-warning"><i
+                                                        class='bx bxs-trash-alt me-0'></i></a>
 
-                                                    <a href="{{ route('project.gallery', ['id' => $project->id]) }}" type="button"
-                                                        class="btn btn-success"><i class='bx bx-right-arrow-alt me-0 margin-btn'></i></i></a>
+                                                <a href="{{ route('project.gallery', ['id' => $project->id]) }}"
+                                                    type="button" class="btn btn-success"><i
+                                                        class='bx bx-right-arrow-alt me-0 margin-btn'></i></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -148,13 +149,13 @@
 @push('scripts')
 @include('backend.components.modal')
 <script>
-    // data table 
+    // data table
     $(document).ready(function() {
         $('#example').DataTable();
     });
 
-     // model content 
-     $(document).ready(function() {
+    // model content
+    $(document).ready(function() {
         $('#exampleLargeModal').on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget);
             var title = button.data('title');
@@ -176,8 +177,8 @@
                 $('#active-badge').addClass('badge bg-danger');
             }
 
-        
- 
+
+
             $('#modal-title').html(title);
             $('#modal-location').html(location);
             $('#land').html(land);

@@ -35,3 +35,28 @@ object-fit: cover !important;
 .justify-center{
     justify-content: center !important;
 }
+.project-list-area__list-item-link:hover{
+    color: #000 !important;
+}
+.project-list-area__list-item-link:hover h4{
+    color: #ffb94f !important;
+    transition: all 0.3s ease-out;
+}
+.mySwiper2{
+    --swiper-navigation-color: #fff !important;
+    --swiper-pagination-color: #fff !important;
+}
+.page-content-long-paragraph{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+@media (max-width: 1280px) {
+   .thumbsSlider{
+    display: none !important;
+   }
+  }

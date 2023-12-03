@@ -131,8 +131,7 @@ class ProjectsController extends Controller
     public function gallery($id)
     {
         $project = Projects::find($id);
-        // $galleries = DB::table('galleries')->get();
-        $galleries = Gallery::all();
+        $galleries = Gallery::where('project_id', $id)->get();
         return view('backend.pages.projects.gallery', ['project' => $project, 'galleries' => $galleries]);
     }
     public function active($id)

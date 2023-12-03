@@ -20,12 +20,12 @@
                             </p>
 
 
-                            <div thumbsSlider="" class="swiper mySwiper thumbsSlider">
+                            <div thumbsSlider="" class="swiper mySwiper thumbsSlider show-on-ipad">
                                 <div class="swiper-wrapper">
                                     @foreach ($images as $image)
-                                    <div class="swiper-slide">
-                                        <img src="{{ asset($image->image) }}" />
-                                    </div>
+                                        <div class="swiper-slide">
+                                            <img src="{{ asset($image->image) }}" />
+                                        </div>
                                     @endforeach
 
 
@@ -34,17 +34,17 @@
 
                         </div>
                         <div class="col-xl-7 col-lg-7 col-md-7">
-                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                                class="swiper mySwiper2">
+                            <div class="swiper mySwiper2" style="height: 100%">
                                 <div class="swiper-wrapper main-swiper">
                                     @foreach ($images as $image)
-                                    <div class="swiper-slide">
-                                        <img src="{{ asset($image->image) }}" />
-                                    </div>
+                                        <div class="swiper-slide">
+                                            <img src="{{ asset($image->image) }}" style="height: 100% !important; object-fit: cover" class="slider-image" style="cursor: pointer" />
+                                        </div>
                                     @endforeach
                                 </div>
                                 <div class="swiper-button-next"></div>
                                 <div class="swiper-button-prev"></div>
+
                             </div>
 
                         </div>
@@ -54,19 +54,21 @@
                         <div class="swiper mySwiper2333">
                             <div class="swiper-wrapper justify-center">
                                 {{-- <ul> --}}
-                                    @foreach($otherProjects as $otherProject)
-                                        <li>
-                                            <div class="swiper-slide"><a href="{{ url('/project/' . $otherProject->slug) }}"> <img class="other-project-image" src="{{ asset($otherProject->image) }}" /></a></div>
+                                @foreach ($otherProjects as $otherProject)
+                                    <li>
+                                        <div class="swiper-slide"><a href="{{ url('/project/' . $otherProject->slug) }}">
+                                                <img class="other-project-image"
+                                                    src="{{ asset($otherProject->image) }}" /></a></div>
 
-                                        </li>
-                                    @endforeach
+                                    </li>
+                                @endforeach
                                 {{-- </ul> --}}
 
                                 <div class="swiper-button-next"></div>
                                 <div class="swiper-button-prev"></div>
                             </div>
 
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,6 +77,9 @@
 @endsection
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/5.1.0/screenfull.min.js"></script>
+
+
     <script>
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 10,
@@ -82,6 +87,7 @@
             freeMode: true,
             watchSlidesProgress: true,
         });
+
         var swiper2 = new Swiper(".mySwiper2", {
             spaceBetween: 10,
             navigation: {
@@ -92,30 +98,42 @@
                 swiper: swiper,
             },
         });
+
+        // Add click event listener to the whole slider container
+        var sliderContainer = document.querySelector('.mySwiper2');
+        sliderContainer.addEventListener('click', function (event) {
+            // Check if the click is not on navigation buttons
+            if (!event.target.classList.contains('swiper-button-next') && !event.target.classList.contains('swiper-button-prev')) {
+                // Toggle full-screen mode using Screenfull
+                if (screenfull.isEnabled) {
+                    screenfull.toggle(sliderContainer);
+                }
+            }
+        });
     </script>
 
-<script>
-    var swiper = new Swiper(".mySwiper2333", {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
+    <script>
+        var swiper = new Swiper(".mySwiper2333", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 50,
-        },
-      },
-    });
-  </script>
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                },
+            },
+        });
+    </script>
 @endpush

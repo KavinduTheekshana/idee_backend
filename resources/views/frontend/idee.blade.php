@@ -232,23 +232,23 @@
                       <img src="{{ asset('frontend/images/projects-thumbnails/empty-thumbnail.svg') }}" alt="thumbnail-13">
                     </td>
                     <td class="project-circle show-on-ipad">
-                      <a href="">
-                        <img src="./assets/images/iterior-icon.svg" alt="Interior">
+                      <a href="{{route('project')}}">
+                        <img src="{{ asset('frontend/images/residential-icon.svg') }}" alt="Residential">
                       </a>
                     </td>
                     <td class="project-circle show-on-ipad">
-                      <a href="">
-                        <img src="./assets/images/hospitality-icon.svg" alt="Hospitality">
+                      <a href="{{route('project')}}">
+                        <img src="{{ asset('frontend/images/comercial-icon.svg') }}" alt="commercial">
                       </a>
                     </td>
                     <td class="project-circle show-on-ipad">
-                      <a href="">
-                        <img src="./assets/images/institution-icon.svg" alt="Institution">
+                      <a href="{{route('project')}}">
+                        <img src="{{ asset('frontend/images/industrial-icon.svg') }}" alt="Institution">
                       </a>
                     </td>
                     <td class="project-circle show-on-ipad">
-                      <a href="">
-                        <img src="./assets/images/residential-icon.svg" alt="Residential">
+                      <a href="{{route('project')}}">
+                        <img src="{{ asset('frontend/images/health-icon.svg') }}" alt="Health">
                       </a>
                     </td>
                     <td class="project-circle">
@@ -597,7 +597,7 @@
                 <div class="col">
                   <div class="project-circle">
                     <a href="">
-                      <img src="{{ asset('frontend/images/projects-thumbnails/3.jpg') }}" alt="thumbnail-3">
+                      <img src="{{ asset('frontend/images/institution-icon.svg') }}" alt="thumbnail-3">
                     </a>
                   </div>
                 </div>

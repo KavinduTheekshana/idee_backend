@@ -7,7 +7,7 @@
         @include('frontend.components.header')
         <main>
             <div class="page-content">
-                <div class="common-content bg-light">
+                {{-- <div class="common-content bg-light">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-5 offset-md-6">
@@ -19,8 +19,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="common-content__separator"></div>
-                <div class="common-content bg-light">
+                <div class="common-content__separator"></div> --}}
+
+
+
+                {{-- <div class="common-content bg-light">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-5 offset-md-6">
@@ -35,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="common-content__separator"></div>
+                <div class="common-content__separator"></div> --}}
                 <div class="common-content bg-light">
                     <div class="container-fluid">
                         <div class="row">

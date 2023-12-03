@@ -11,18 +11,18 @@
           <li class="nav-item">
             <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="{{ route('about') }}">idée</a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link {{ request()->is('people') || request()->is('consultants') ? 'active' : '' }}" href="{{ route('people') }}">people</a>
-          </li>
+          </li> --}}
           <li class="nav-item">
             <a class="nav-link {{ request()->is('project/*') ? 'active' : '' }}" href="{{ route('project') }}">projects</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">contact</a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" href="#">accolades</a>
-          </li>
+          </li> --}}
         </ul>
       </div>
     </div>
