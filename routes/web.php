@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ProjectssController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserProjectsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -74,6 +75,7 @@ Route::get('/project-diactive/{id}', [projectsController::class, 'diactive'])->n
 Route::get('/project-delete/{id}', [projectsController::class, 'delete'])->name('project.delete');
 Route::post('/project-update', [projectsController::class, 'update'])->name('project.update');
 Route::get('/project-update-view/{id}', [projectsController::class, 'update_view'])->name('project.update_view');
+Route::get('/project-list/{id}', [UserProjectsController::class, 'projects_list'])->name('project.list');
 
 Route::post('/gallery/save', [GalleryController::class, 'save'])->name('gallery.save');
 Route::get('/gallery-active/{id}', [GalleryController::class, 'active'])->name('gallery.active');

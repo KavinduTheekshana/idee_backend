@@ -161,4 +161,5 @@ class ProjectsController extends Controller
         return view('backend.pages.projects.project_update', ['project' => $project, 'categories' => $categories]);
     }
 
+
 }

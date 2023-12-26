@@ -1060,19 +1060,37 @@
                                                     alt="thumbnail-1">
                                             </td>
                                             <td class="project-circle">
-                                                <a href="projects-list.html">
+                                                <a href="{{ route('project.list', ['id' => '1']) }}">
                                                     <img src="{{ asset('frontend/images/residential-icon.svg') }}"
                                                         alt="Residential projects" data-toggle="tooltip"
                                                         data-bs-placement="bottom" title="Residential projects">
                                                 </a>
                                             </td>
                                             <td class="project-circle">
-                                                <a href="projects-list.html">
+                                                <a href="{{ route('project.list', ['id' => '2']) }}">
                                                     <img src="{{ asset('frontend/images/comercial-icon.svg') }}"
                                                         alt="Commercial projects" data-toggle="tooltip"
                                                         data-bs-placement="bottom" title="Commercial projects">
                                                 </a>
                                             </td>
+
+                                            <td class="project-circle">
+                                                <a href="{{ route('project.list', ['id' => '3']) }}">
+                                                    <img class="category-icon"
+                                                        src="{{ asset('frontend/images/industrial-icon.svg') }}"
+                                                        alt="Industial projects" data-toggle="tooltip"
+                                                        data-bs-placement="bottom" title="Industial projects">
+                                                </a>
+                                            </td>
+                                            <td class="project-circle">
+                                                <a href="{{ route('project.list', ['id' => '4']) }}">
+                                                    <img class="category-icon"
+                                                        src="{{ asset('frontend/images/health-icon.svg') }}"
+                                                        alt="Health projects" data-toggle="tooltip"
+                                                        data-bs-placement="bottom" title="Health projects">
+                                                </a>
+                                            </td>
+
                                             {{-- <td class="project-circle">
                           <a href="">
                             <img src="{{ asset('frontend/images/hospitality-icon.svg') }}" alt="Hospitality" data-toggle="tooltip" data-bs-placement="bottom" title="Hospitality">
@@ -1131,31 +1149,34 @@
                                                     alt="thumbnail-3">
                                             </td>
                                             <td class="project-circle">
-                                                <a href="">
-                                                    <img src="{{ asset('frontend/images/comercial-icon.svg') }}"
-                                                        alt="Commercial projects" data-toggle="tooltip"
-                                                        data-bs-placement="bottom" title="Commercial projects">
-                                                </a>
-                                            </td>
-                                            <td class="project-circle">
-                                                <a href="">
-                                                    <img src="{{ asset('frontend/images/hospitality-icon.svg') }}"
-                                                        alt="Hospitality projects" data-toggle="tooltip"
-                                                        data-bs-placement="bottom" title="Hospitality projects">
-                                                </a>
-                                            </td>
-                                            <td class="project-circle">
-                                                <a href="">
+                                                <a href="{{ route('project.list', ['id' => '5']) }}">
                                                     <img src="{{ asset('frontend/images/institution-icon.svg') }}"
                                                         alt="Institution projects" data-toggle="tooltip"
                                                         data-bs-placement="bottom" title="Institution projects">
                                                 </a>
                                             </td>
                                             <td class="project-circle">
-                                                <a href="">
-                                                    <img src="{{ asset('frontend/images/industrial-icon.svg') }}"
-                                                        alt="Industrial projects" data-toggle="tooltip"
-                                                        data-bs-placement="bottom" title="Industrial projects">
+                                                <a href="{{ route('project.list', ['id' => '6']) }}">
+                                                    <img src="{{ asset('frontend/images/hospitality-icon.svg') }}"
+                                                        alt="Hospitality projects" data-toggle="tooltip"
+                                                        data-bs-placement="bottom" title="Hospitality projects">
+                                                </a>
+                                            </td>
+
+                                            <td class="project-circle">
+                                                <a href="{{ route('project.list', ['id' => '7']) }}">
+                                                    <img class="category-icon"
+                                                        src="{{ asset('frontend/images/iterior-icon.svg') }}"
+                                                        alt="Interior projects" data-toggle="tooltip"
+                                                        data-bs-placement="bottom" title="Interior projects">
+                                                </a>
+                                            </td>
+                                            <td class="project-circle">
+                                                <a href="{{ route('project.list', ['id' => '8']) }}">
+                                                    <img class="category-icon"
+                                                        src="{{ asset('frontend/images/other-icon.svg') }}"
+                                                        alt="Other projects" data-toggle="tooltip"
+                                                        data-bs-placement="bottom" title="Other projects">
                                                 </a>
                                             </td>
                                             <td class="project-circle">

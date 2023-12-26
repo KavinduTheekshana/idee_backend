@@ -11,7 +11,7 @@
                 <div class="common-content-small">
                     <h2 class="fw-bolder">{{ $categoryName }} Projects</h2>
                     <div class="row mt-3">
-                        <div class="col-xl-5 col-lg-5 col-md-5 position-relative">
+                        <div class="col-xl-5 position-relative">
                             <h3 class="fw-bolder">{{ $project->title }}</h3>
                             <h6 class="m-0">Location _ {{ $project->location }}</h6>
                             <h6 class="m-0">Land Extent_{{ $project->land }}/Floor area_{{ $project->floor }}/ Project
@@ -20,7 +20,7 @@
                             </p>
 
 
-                            <div thumbsSlider="" class="swiper mySwiper thumbsSlider show-on-ipad">
+                            <div thumbsSlider="" class="swiper mySwiper thumbsSlider">
                                 <div class="swiper-wrapper">
                                     @foreach ($images as $image)
                                         <div class="swiper-slide">
@@ -33,7 +33,7 @@
                             </div>
 
                         </div>
-                        <div class="col-xl-7 col-lg-7 col-md-7">
+                        <div class="col-xl-7">
                             <div class="swiper mySwiper2" style="height: 100%">
                                 <div class="swiper-wrapper main-swiper">
                                     @foreach ($images as $image)
@@ -45,6 +45,18 @@
                                 <div class="swiper-button-next"></div>
                                 <div class="swiper-button-prev"></div>
 
+                            </div>
+
+                            <div thumbsSlider="" class="swiper mySwiper3 thumbsSlider2">
+                                <div class="swiper-wrapper">
+                                    @foreach ($images as $image)
+                                        <div class="swiper-slide">
+                                            <img src="{{ asset($image->image) }}" />
+                                        </div>
+                                    @endforeach
+
+
+                                </div>
                             </div>
 
                         </div>
@@ -81,23 +93,31 @@
 
 
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 10,
-            slidesPerView: 4,
-            freeMode: true,
-            watchSlidesProgress: true,
-        });
+       var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
 
-        var swiper2 = new Swiper(".mySwiper2", {
-            spaceBetween: 10,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            thumbs: {
-                swiper: swiper,
-            },
-        });
+var swiper3 = new Swiper(".mySwiper3", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+var swiper2 = new Swiper(".mySwiper2", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper2: swiper,  // Key-value pair for the second thumb
+    },
+});
+
 
         // Add click event listener to the whole slider container
         var sliderContainer = document.querySelector('.mySwiper2');
@@ -110,6 +130,7 @@
                 }
             }
         });
+
     </script>
 
     <script>
