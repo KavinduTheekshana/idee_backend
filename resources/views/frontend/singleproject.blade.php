@@ -69,9 +69,13 @@
                                 @foreach ($otherProjects as $otherProject)
                                     <li>
                                         <div class="swiper-slide"><a href="{{ url('/project/' . $otherProject->slug) }}">
-                                                <img class="other-project-image"
-                                                    src="{{ asset($otherProject->image) }}" /></a></div>
+                                                {{-- <img class="other-project-image"
+                                                    src="{{ asset($otherProject->image) }}" /> --}}
 
+
+
+                                                    <img src="{{ asset($otherProject->image) }}" class="other-project-image" alt="project-8" data-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="{{ $otherProject->title }}" aria-label="{{ asset($otherProject->title) }}">
+                                                </a></div>
                                     </li>
                                 @endforeach
                                 {{-- </ul> --}}

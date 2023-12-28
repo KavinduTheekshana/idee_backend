@@ -13,7 +13,7 @@
                     <ul class="project-list-area__list">
                         @foreach ($projects as $project)
                         <li class="project-list-area__list-item">
-                        <a href="project-1.html" class="project-list-area__list-item-link">
+                        <a href="{{ route('project.show', ['slug' => $project->slug]) }}" class="project-list-area__list-item-link">
                           <h4 class="fw-bolder m-0">{{$project->title}}</h4>
                           <p class="m-0">Location _ {{$project->location}}</p>
                           <p>Land Extent_{{$project->land}}p/Floor area_{{$project->floor}} Sqft/ Project year_{{$project->project_year}}/ Completed_{{$project->completed_year}}</p>
