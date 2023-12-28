@@ -20,7 +20,7 @@
                             </p>
 
 
-                            <div thumbsSlider="" class="swiper mySwiper thumbsSlider">
+                            <div thumbsSlider="" class="swiper mySwiper thumbsSlider thumbsSliderobject">
                                 <div class="swiper-wrapper">
                                     @foreach ($images as $image)
                                         <div class="swiper-slide">
@@ -38,7 +38,9 @@
                                 <div class="swiper-wrapper main-swiper">
                                     @foreach ($images as $image)
                                         <div class="swiper-slide">
-                                            <img src="{{ asset($image->image) }}" style="height: 100% !important; object-fit: cover" class="slider-image" style="cursor: pointer" />
+                                            <img src="{{ asset($image->image) }}"
+                                                style="height: 100% !important; object-fit: cover" class="slider-image"
+                                                style="cursor: pointer" />
                                         </div>
                                     @endforeach
                                 </div>
@@ -47,17 +49,32 @@
 
                             </div>
 
-                            <div thumbsSlider="" class="swiper mySwiper3 thumbsSlider2">
-                                <div class="swiper-wrapper">
-                                    @foreach ($images as $image)
-                                        <div class="swiper-slide">
-                                            <img src="{{ asset($image->image) }}" />
-                                        </div>
-                                    @endforeach
+                            <div class="mobile-thumb">
+                                {{-- <div thumbsSlider="" class="swiper mySwiper thumbsSlider">
+                                    <div class="swiper-wrapper">
+                                        @foreach ($images as $image)
+                                            <div class="swiper-slide">
+                                                <img src="{{ asset($image->image) }}" />
+                                            </div>
+                                        @endforeach
 
 
-                                </div>
+                                    </div>
+                                </div> --}}
+
+                                {{-- <div thumbsSlider="" class="swiper mySwiper3 thumbsSlider2">
+                                    <div class="swiper-wrapper">
+                                        @foreach ($images as $image)
+                                            <div class="swiper-slide">
+                                                <img src="{{ asset($image->image) }}" />
+                                            </div>
+                                        @endforeach
+
+
+                                    </div>
+                                </div> --}}
                             </div>
+
 
                         </div>
                     </div>
@@ -74,8 +91,11 @@
 
 
 
-                                                    <img src="{{ asset($otherProject->image) }}" class="other-project-image" alt="project-8" data-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="{{ $otherProject->title }}" aria-label="{{ asset($otherProject->title) }}">
-                                                </a></div>
+                                                <img src="{{ asset($otherProject->image) }}" class="other-project-image"
+                                                    alt="project-8" data-toggle="tooltip" data-bs-placement="bottom"
+                                                    title="" data-bs-original-title="{{ $otherProject->title }}"
+                                                    aria-label="{{ asset($otherProject->title) }}">
+                                            </a></div>
                                     </li>
                                 @endforeach
                                 {{-- </ul> --}}
@@ -97,44 +117,44 @@
 
 
     <script>
-       var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
 
-var swiper3 = new Swiper(".mySwiper3", {
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
+        // var swiper3 = new Swiper(".mySwiper3", {
+        //     spaceBetween: 10,
+        //     slidesPerView: 4,
+        //     freeMode: true,
+        //     watchSlidesProgress: true,
+        // });
 
-var swiper2 = new Swiper(".mySwiper2", {
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-        swiper2: swiper,  // Key-value pair for the second thumb
-    },
-});
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper, // Key-value pair for the second thumb
+            },
+        });
 
 
         // Add click event listener to the whole slider container
         var sliderContainer = document.querySelector('.mySwiper2');
-        sliderContainer.addEventListener('click', function (event) {
+        sliderContainer.addEventListener('click', function(event) {
             // Check if the click is not on navigation buttons
-            if (!event.target.classList.contains('swiper-button-next') && !event.target.classList.contains('swiper-button-prev')) {
+            if (!event.target.classList.contains('swiper-button-next') && !event.target.classList.contains(
+                    'swiper-button-prev')) {
                 // Toggle full-screen mode using Screenfull
                 if (screenfull.isEnabled) {
                     screenfull.toggle(sliderContainer);
                 }
             }
         });
-
     </script>
 
     <script>
@@ -160,5 +180,20 @@ var swiper2 = new Swiper(".mySwiper2", {
                 },
             },
         });
+    </script>
+
+    <script>
+        $(window).resize(function() {
+            if ($(window).width() < 1199) {
+                // Move thumbsSlider to col-xl-7
+                $('.thumbsSliderobject').appendTo('.mobile-thumb').addClass('thumbsSlider2').removeClass('thumbsSlider');
+            } else {
+                // Move it back to its original position if the window is resized back
+                $('.thumbsSliderobject').appendTo('.col-xl-5 .position-relative').addClass('thumbsSlider').removeClass('thumbsSlider2');
+            }
+        });
+
+        // Trigger the resize function on page load
+        $(window).trigger('resize')
     </script>
 @endpush
