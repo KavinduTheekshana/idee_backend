@@ -52,7 +52,7 @@
 
 
                                         <td>{{ \Illuminate\Support\Str::limit($project->title, 70, '...') }}</td>
-                                        <td>{{ substr($project->title, 100) }}</td>
+
                                         <td>{{ $project->location }}</td>
                                         <td>{{ $project->category->name }}</td>
 
@@ -82,10 +82,10 @@
                                                     data-bs-target="#exampleLargeModal"
                                                     data-title="{{ $project->title }}"
                                                     data-location="{{ $project->location }}"
-                                                    data-land="{{ $project->land }}"
+                                                    data-stage="{{ $project->stage }}"
                                                     data-description="{{ $project->description }}"
                                                     data-status="{{ $project->status }}"
-                                                    data-floor="{{ $project->floor }}"
+                                                    data-scale="{{ $project->scale }}"
                                                     data-category="{{ $project->category->name }}"
                                                     data-project_year="{{ $project->project_year }}"
                                                     data-completed_year="{{ $project->completed_year }}"
@@ -161,11 +161,9 @@
             var title = button.data('title');
             var location = button.data('location');
             var status = button.data('status');
-            var land = button.data('land');
-            var floor = button.data('floor');
-            var completed_year = button.data('completed_year');
+            var scale = button.data('scale');
+            var stage = button.data('stage');
             var description = button.data('description');
-            var project_year = button.data('project_year');
             var category = button.data('category');
             var image = button.data('image');
 
@@ -181,10 +179,8 @@
 
             $('#modal-title').html(title);
             $('#modal-location').html(location);
-            $('#land').html(land);
-            $('#floor').html(floor);
-            $('#completed_year').html(completed_year);
-            $('#project_year').html(project_year);
+            $('#stage').html(stage);
+            $('#scale').html(scale);
             $('#category').html(category);
             $('#modalBody').html(description);
             $('.model-image').attr('src', image);

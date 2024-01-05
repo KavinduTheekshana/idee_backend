@@ -38,10 +38,8 @@ class ProjectsController extends Controller
             'slug' => ['required', 'string', 'max:255'],
             'category_id' => ['required', 'string', 'max:255'],
             'location' => ['required', 'string', 'max:255'],
-            'land' => ['required', 'string', 'max:255'],
-            'floor' => ['required', 'string', 'max:255'],
-            'project_year' => ['required'],
-            'completed_year' => ['required'],
+            'scale' => ['required', 'string', 'max:255'],
+            'stage' => ['required'],
             'image' => ['image'],
             'description' => ['required'],
         ]);
@@ -51,10 +49,8 @@ class ProjectsController extends Controller
         $project->slug = $request->input('slug');
         $project->category_id = $request->input('category_id');
         $project->location = $request->input('location');
-        $project->land = $request->input('land');
-        $project->floor = $request->input('floor');
-        $project->project_year = $request->input('project_year');
-        $project->completed_year = $request->input('completed_year');
+        $project->scale = $request->input('scale');
+        $project->stage = $request->input('stage');
         $project->image = $request->input('image');
         $project->description = $request->input('description');
 
@@ -77,10 +73,8 @@ class ProjectsController extends Controller
             'slug' => ['required', 'string', 'max:255'],
             'category_id' => ['required', 'string', 'max:255'],
             'location' => ['required', 'string', 'max:255'],
-            'land' => ['required', 'string', 'max:255'],
-            'floor' => ['required', 'string', 'max:255'],
-            'project_year' => ['required'],
-            'completed_year' => ['required'],
+            'scale' => ['required', 'string', 'max:255'],
+            'stage' => ['required'],
             'image' => ['image'],
             'description' => ['required'],
         ]);
@@ -91,8 +85,8 @@ class ProjectsController extends Controller
         $project->slug = $request->input('slug');
         $project->category_id = $request->input('category_id');
         $project->location = $request->input('location');
-        $project->land = $request->input('land');
-        $project->floor = $request->input('floor');
+        $project->scale = $request->input('scale');
+        $project->stage = $request->input('stage');
         $project->project_year = $request->input('project_year');
         $project->completed_year = $request->input('completed_year');
         $project->image = $request->input('image');
@@ -116,10 +110,8 @@ class ProjectsController extends Controller
             'slug' => $project->slug,
             'location' => $project->location,
             'category_id' => $project->category_id,
-            'land' => $project->land,
-            'floor' => $project->floor,
-            'project_year' => $project->project_year,
-            'completed_year' => $project->completed_year,
+            'scale' => $project->scale,
+            'stage' => $project->stage,
             'description' => $project->description,
             'image' => $project->image,
         );

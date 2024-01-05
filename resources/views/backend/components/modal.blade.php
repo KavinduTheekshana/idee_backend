@@ -4,7 +4,7 @@
           <div class="modal-content">
               <div class="modal-header">
                   <h5 class="modal-title"><strong id="modal-title"></strong></h5>
-            
+
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -16,8 +16,8 @@
                   <br>
                   <br>
 
-                  <p>Location _ No. <span id="modal-location"></span> <br>
-                      Land Extent_<span id="land"></span> / Floor area_<span id="floor"></span> / Project year_<span id="project_year"></span> / Completed_<span id="completed_year"></span> </p>
+                  <p>Location _ <span id="modal-location"></span> <br>
+                      Scale - <span id="scale"></span> / Stage - <span id="stage"></span></p>
                   <br>
                   <div class="modal-body p-0" id="modalBody"></div>
               </div>

@@ -65,7 +65,7 @@
                                     </select>
                                 </div>
 
-                                  
+
 
                                     <div class="form-row mt-3">
                                         <label for="input1" class="form-label">Location</label>
@@ -74,12 +74,24 @@
                                     </div>
 
                                     <div class="form-row mt-3">
-                                        <label for="input1" class="form-label">Land Extent</label>
-                                        <input type="text" class="form-control" name="land" required value="{{ $project->land }}"
-                                            placeholder="Land Extent">
+                                        <label for="input1" class="form-label">Scale</label>
+                                        <input type="text" class="form-control" name="scale" required value="{{ $project->scale }}"
+                                            placeholder="scale">
                                     </div>
 
                                     <div class="form-row mt-3">
+                                        <label for="input1" class="form-label">Stage</label>
+                                    <select class="form-select mb-3" aria-label="Default select example" name="stage">
+                                        <option selected value="{{$project->stage}}">{{$project->stage}}</option>
+
+                                        <option value="Completed">Completed</option>
+                                        <option value="Under Construction">Under Construction</option>
+                                        <option value="Not Started">Not Started</option>
+
+                                    </select>
+                                    </div>
+
+                                    {{-- <div class="form-row mt-3">
                                         <label for="input1" class="form-label">Floor area</label>
                                         <input type="text" class="form-control" name="floor" required value="{{ $project->floor }}"
                                             placeholder="Floor area">
@@ -95,7 +107,7 @@
                                         <label for="input1" class="form-label">Completed year</label>
                                         <input type="number" class="form-control" name="completed_year" required value="{{ $project->completed_year }}"
                                             placeholder="Completed year">
-                                    </div>
+                                    </div> --}}
 
 
                                     <div class="form-row mt-3">
@@ -146,7 +158,7 @@
 
 @push('scripts')
 <script>
-    // editer 
+    // editer
     tinymce.init({
         selector: 'textarea#myeditorinstance', // Replace this CSS selector to match the placeholder element for TinyMCE
         plugins: 'code table lists',
@@ -167,7 +179,7 @@
         }
     }
 
-    // slug editer 
+    // slug editer
     $(document).ready(function() {
         $('#myTextbox').on('input', function() {
             var value = $(this).val();

@@ -17,10 +17,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->string('location');
-            $table->string('land');
-            $table->string('floor');
-            $table->string('project_year');
-            $table->string('completed_year');
+            $table->string('scale');
+            $table->string('stage');
             $table->string('image');
             $table->longText('description');
             $table->boolean('status')->default(1);
