@@ -14,8 +14,7 @@
                         <div class="col-xl-5 position-relative">
                             <h3 class="fw-bolder">{{ $project->title }}</h3>
                             <h6 class="m-0">Location _ {{ $project->location }}</h6>
-                            <h6 class="m-0">Land Extent_{{ $project->land }}/Floor area_{{ $project->floor }}/ Project
-                                year_{{ $project->project_year }}/ Completed_{{ $project->completed_year }}</h6>
+                            <h6 class="m-0">Scale - {{ $project->scale }} / Stage - {{ $project->stage }}</h6>
                             <p class="mt-4 page-content-long-paragraph">{{ strip_tags($project->description) }}
                             </p>
 
