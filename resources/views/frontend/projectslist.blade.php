@@ -17,7 +17,7 @@
                                         class="project-list-area__list-item-link">
                                         <h4 class="fw-bolder m-0">{{ $project->title }}</h4>
                                         <p class="m-0">Location _ {{ $project->location }}</p>
-                                        <p>Scale - {{ $project->scale }} / Stage{{ $project->stage }}</p>
+                                        <p>Scale - {{ $project->scale }} / Stage - {{ $project->stage }}</p>
                                     </a>
                                 </li>
                             @endforeach
