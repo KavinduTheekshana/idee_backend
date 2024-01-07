@@ -1646,10 +1646,8 @@
                                 )); // Assuming 'location' is the property
 
                             // Append additional project details in another <p> tag
-                            var additionalDetails = 'Land Extent_' + project.land +
-                                '/Floor area_' + project.floor + '/ Project year_' +
-                                project.project_year + '/ Completed_' + project
-                                .completed_year; // Adjust property names as needed
+                            var additionalDetails = 'Scale - ' + project.scale +
+                                '/ Stage - ' + project.stage; // Adjust property names as needed
                             projectLink.append($('<p>').text(additionalDetails));
 
                             // Create an <li> tag and append the <a> tag to it
