@@ -120,6 +120,7 @@
             spaceBetween: 10,
             slidesPerView: 4,
             freeMode: true,
+            loop: true,
             watchSlidesProgress: true,
             autoplay: {
                 delay: 2500,
