@@ -81,14 +81,16 @@
 
                                     <div class="form-row mt-3">
                                         <label for="input1" class="form-label">Stage</label>
-                                    <select class="form-select mb-3" aria-label="Default select example" name="stage">
+                                    {{-- <select class="form-select mb-3" aria-label="Default select example" name="stage">
                                         <option selected value="{{$project->stage}}">{{$project->stage}}</option>
 
                                         <option value="Completed">Completed</option>
                                         <option value="Under Construction">Under Construction</option>
                                         <option value="Not Started">Not Started</option>
 
-                                    </select>
+                                    </select> --}}
+                                    <input type="text" class="form-control" name="stage" required value="{{ $project->stage }}"
+                                            placeholder="scale">
                                     </div>
 
                                     {{-- <div class="form-row mt-3">

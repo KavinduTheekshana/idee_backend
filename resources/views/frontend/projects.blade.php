@@ -199,8 +199,8 @@
                                                 <a href="javascript:void(0)" data-category-id="3" class="category-link">
                                                     <img class="category-icon"
                                                         src="{{ asset('frontend/images/industrial-icon.svg') }}"
-                                                        alt="Industial projects" data-toggle="tooltip"
-                                                        data-bs-placement="bottom" title="Industial projects">
+                                                        alt="Industrial projects" data-toggle="tooltip"
+                                                        data-bs-placement="bottom" title="Industrial projects">
                                                 </a>
                                             </td>
                                             <td class="project-circle">
@@ -1078,8 +1078,8 @@
                                                 <a href="{{ route('project.list', ['id' => '3']) }}">
                                                     <img class="category-icon"
                                                         src="{{ asset('frontend/images/industrial-icon.svg') }}"
-                                                        alt="Industial projects" data-toggle="tooltip"
-                                                        data-bs-placement="bottom" title="Industial projects">
+                                                        alt="Industrial projects" data-toggle="tooltip"
+                                                        data-bs-placement="bottom" title="Industrial projects">
                                                 </a>
                                             </td>
                                             <td class="project-circle">

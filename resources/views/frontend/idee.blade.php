@@ -149,7 +149,7 @@
 
                   <td class="project-circle">
                     <a href="{{route('project')}}">
-                      <img src="{{ asset('frontend/images/industrial-icon.svg') }}" alt="Industial" title="Industial" data-toggle="tooltip" data-bs-placement="bottom">
+                      <img src="{{ asset('frontend/images/industrial-icon.svg') }}" alt="Industrial" title="Industrial" data-toggle="tooltip" data-bs-placement="bottom">
                     </a>
                   </td>
 

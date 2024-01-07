@@ -58,7 +58,7 @@
                                     <div class="form-row mt-3">
                                         <label for="input1" class="form-label">Category</label>
                                     <select class="form-select mb-3" aria-label="Default select example" name="category_id">
-                                        <option selected>Open this select menu</option>
+
                                         @foreach ($categories as $category)
                                         <option value="{{$category->id}}">{{$category->name}}</option>
                                         @endforeach
@@ -74,20 +74,22 @@
                                     </div>
 
                                     <div class="form-row mt-3">
-                                        <label for="input1" class="form-label">Scale</label>
+                                        <label for="input1" class="form-label">Scale (If you don't have Scale Please type N/A)</label>
                                         <input type="text" class="form-control" name="scale" required
                                             placeholder="Scale">
                                     </div>
                                     <div class="form-row mt-3">
                                         <label for="input1" class="form-label">Stage</label>
-                                    <select class="form-select mb-3" aria-label="Default select example" name="stage">
+                                    {{-- <select class="form-select mb-3" aria-label="Default select example" name="stage">
 
 
                                         <option value="Completed">Completed</option>
                                         <option value="Under Construction">Under Construction</option>
                                         <option value="Not Started">Not Started</option>
 
-                                    </select>
+                                    </select> --}}
+                                    <input type="text" class="form-control" name="stage" required
+                                    placeholder="scale">
                                     </div>
 
 

@@ -32,7 +32,7 @@
                             </div>
 
                         </div>
-                        <div class="col-xl-7">
+                        <div class="col-xl-7" style="height: 60vh">
                             <div class="swiper mySwiper2" style="height: 100%">
                                 <div class="swiper-wrapper main-swiper">
                                     @foreach ($images as $image)
@@ -121,6 +121,10 @@
             slidesPerView: 4,
             freeMode: true,
             watchSlidesProgress: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
         });
 
         // var swiper3 = new Swiper(".mySwiper3", {
@@ -185,10 +189,12 @@
         $(window).resize(function() {
             if ($(window).width() < 1199) {
                 // Move thumbsSlider to col-xl-7
-                $('.thumbsSliderobject').appendTo('.mobile-thumb').addClass('thumbsSlider2').removeClass('thumbsSlider');
+                $('.thumbsSliderobject').appendTo('.mobile-thumb').addClass('thumbsSlider2').removeClass(
+                    'thumbsSlider');
             } else {
                 // Move it back to its original position if the window is resized back
-                $('.thumbsSliderobject').appendTo('.col-xl-5 .position-relative').addClass('thumbsSlider').removeClass('thumbsSlider2');
+                $('.thumbsSliderobject').appendTo('.col-xl-5 .position-relative').addClass('thumbsSlider')
+                    .removeClass('thumbsSlider2');
             }
         });
 
