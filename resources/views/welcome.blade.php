@@ -17,18 +17,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('about')}}">idée</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{route('people')}}">people</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('project')}}">projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('contact')}}">contact</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="#">accolades</a>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>
